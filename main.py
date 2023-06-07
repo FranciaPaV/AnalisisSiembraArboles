@@ -1,10 +1,7 @@
 import pandas as pd
+from data.datos1 import tabla
+from helpers.crearTablasHtml import crearTabla
 
-
-
-#obtenemos los datos de la DB
-tabla = pd.read_csv('./data/Siembras.csv')
-#print(tabla)
 
 #- FILTRO1: Encontrar todos los datos de santa fe de Antioquia donde se tengan siembras de + de 250 arboles
 santaFe=tabla.query('(Ciudad=="Santa Fe de Antioquia")&(Arboles>=250)')
@@ -29,3 +26,12 @@ caramanta=tabla.query('(Ciudad=="Caramanta")&(Arboles>100)')
 #- FILTRO 6: Encontrar los datos de la vereda mallarino del municipio de Yarumal
 yarumal=tabla.query('(Ciudad=="Yarumal")&(Vereda=="Mallarino")')
 #print(yarumal)
+
+#Creando tablas
+
+crearTabla(santaFe,"arbolesStafe")
+crearTabla(caucasia,"estadisticaCaucasia")
+crearTabla(belmira,"veredasBelmira")
+crearTabla(bello,"veredasBello")
+crearTabla(caramanta,"arbolesCaramanta")
+crearTabla(yarumal,"veredasYarumal")
