@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/estilos.css">
-    <title>Analisis Siembra de Arboles</title>
+    <title>Analisis Siembra de Arboles en Antioquia</title>
 </head>
 <body>
     <header>
@@ -21,34 +21,35 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Yarumal</a>
+                    <a class="nav-link" href="./views/yarumal.html">Yarumal</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Santa Fe de Antioquia</a>
+                    <a class="nav-link" href="./views/santaFe.html">Santa Fe de Antioquia</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Caucasia</a>
+                    <a class="nav-link" href="./views/caucasia.html">Caucasia</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Belmira</a>
+                    <a class="nav-link" href="./views/belmira.html">Belmira</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Bello</a>
+                    <a class="nav-link" href="./views/bello.html">Bello</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Caramanta</a>
+                    <a class="nav-link" href="./views/caramanta.html">Caramanta</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
     </header>
-    <main>
+    <main class="mt">
       <section class="banner">
-        <h1 class="white">Analisis <br> Siembra de <br> Arboles</h1>
+        <img class="img_fluid" src="./assets/img/banner1.jpg" alt="">
+        <h1 class="white txt_abs">Analisis <br> Siembra de <br> Arboles <br>en Antioquia </h1>
       </section>
       <section class="container my-5">
         <div class="row">
@@ -56,11 +57,16 @@
             <img src="./assets/img/arbol1.jpg" alt="" class="img-fluid w-100">
           </div>
           <div class="col-12 col-md-8 aling-self-center">
-          <h2>CONSULTA GENERAL DE ALGO</h2>
+          <h2>REFORESTACION EN ANTIOQUIA</h2>
           <P>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident sapiente quidem ipsa eveniet beatae quis! Est molestias eum natus corrupti provident impedit repellat voluptate perferendis, dignissimos amet assumenda enim voluptas!
+            La siembra de árboles en Antioquia es una actividad fundamental para preservar la riqueza natural del departamento y promover un futuro sostenible. No solo provee sombra, refugio y alimento para la fauna local, sino que también ayuda a proteger las fuentes de agua, prevenir la erosión del suelo y mejorar la calidad del aire. Además, la reforestación contribuye a la generación de empleo y a la mejora de la calidad de vida de las comunidades locales.
+            <br><br>
+            Concientizar sobre la importancia de la siembra de árboles en Antioquia es fundamental para involucrar a la población en la protección y restauración del entorno natural. Promover la participación activa de los ciudadanos, las empresas y las instituciones en la siembra y el cuidado de los árboles puede marcar una diferencia significativa en la conservación de los recursos naturales y en la lucha contra el cambio climático.
+            <br><br>
+            En resumen, el análisis de la siembra de árboles en el departamento de Antioquia es una herramienta valiosa para generar conciencia y acción en la protección del medio ambiente. Al reconocer el valor de los árboles y su papel vital en la salud de los ecosistemas, podemos trabajar juntos para construir un futuro sostenible y preservar la belleza natural de esta hermosa región colombiana.
           </P>
-          <button type="button" class="btn btn-primary my-4" id="generarboton">Generar Reporte</button>
+<!--AQUI VA EL BOTON Y LA TABLA-->
+<button type="button" class="btn btn-primary my-4" id="generarboton">Generar Reporte</button>
 
           <div class="d-none" id="reporte"> <!--d-none: para ocultar la tabla-->
             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -79,20 +85,82 @@
             </ul>
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"><iframe src="./tables/arbolesStafe.html" height="200px" class="w-100"></iframe></div>
-              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"><iframe src="./tables/estadisticaCaucasia.html" height="200px" class="w-100"></iframe></div>
-              <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"><iframe src="./tables/veredasBelmira.html" height="200px" class="w-100"></iframe></div>
+              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"><iframe src="./tables/estadisticaCaucasia.html" height="300px" class="w-100"></iframe></div>
+              <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"><iframe src="./tables/veredasBelmira.html" height="300px" class="w-100"></iframe></div>
               <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
             </div>
           </div>
-          </div>
-          </div>
-      </section>
-      <section class="banner2">
 
+
+
+          </div>
+        </div>
+      </section>
+      <section class="banner_img img_1">
+        <div class="txt_banner">
+          <h2>Antioquia:
+            <br>Superficie: 63.612 Km²
+            <br>5.6% del territorio nacional
+            <br>Su capital es la ciudad de Medellín y está dividido políticamente en 125 municipios.
+          </h2>
+        </div>
+      </section>
+      <section>
+        <iframe style="margin-top:5px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4053814.0026495107!2d-78.14738697406827!3d7.148794090862388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429b2d9a8a783%3A0x540a36ca7581959a!2sAntioquia!5e0!3m2!1ses!2sco!4v1686192246344!5m2!1ses!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
-    <footer >
-    </footer>
+   
+      <footer class="section footer-classic context-dark bg-image  pd_footer" style="background: green ; ">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+              <div class="pr-xl-4"><a class="brand" href="index.html"><img src="./assets/img/logo4.png" alt="" width="50" height="60" srcset="./assets/img/logo4.png"></a>
+                <p>Protection of Personal Data – Terms and conditions – Editorial Guidelines – Security and Privacy Policy – ​​Compliance with accessibility and usability of the Corporate Website</p>
+                <!-- Rights-->
+                <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>Cra 79AA #1A sur 185</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#">reforestacion@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd><a href="tel:#">311 123 45 67</a> <span>or</span> <a href="tel:#">312 987 65 43</a>
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h5>Links</h5>
+              <ul class="nav-list">
+                <li><a href="./views/yarumal.html">Yarumal</a></li>
+                <li><a href="./views/santaFe.html">Santa Fe de Antioquia</a></li>
+                <li><a href="./views/caucasia.html">Caucasia</a></li>
+                <li><a href="./views/belmira.html">Belmira</a></li>
+                <li><a href="./views/bello.html">Bello</a></li>
+                <li><a href="./views/caramanta.html">Caramanta</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+       <!-- 
+        <div class="row no-gutters social-container">
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-facebook"></span><span>Yarumal</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-instagram"></span><span>Santa Fe de SantaFedeAntioquia1</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-twitter"></span><span>Caucasia</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>Belmira</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>Bello</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>Caramanta</span></a></div>
+        </div>-->
+      </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="./controllers/controlador.js"></script>
 </body>

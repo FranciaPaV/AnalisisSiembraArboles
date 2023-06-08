@@ -1,7 +1,7 @@
 import pandas as pd
 from data.datos1 import tabla
 from helpers.crearTablasHtml import crearTabla
-
+#from helpers.graficasBarras import graficarPromedioSiembra
 
 #- FILTRO1: Encontrar todos los datos de santa fe de Antioquia donde se tengan siembras de + de 250 arboles
 santaFe=tabla.query('(Ciudad=="Santa Fe de Antioquia")&(Arboles>=250)')
@@ -14,6 +14,7 @@ caucasia=tabla.query('Ciudad=="Caucasia"')
 #- FILTRO 3: Filtrar todos los datos de las veredas Rio arriba y la Salazar de Belmira
 belmira=tabla.query('(Vereda=="Rio Arriba")|(Vereda=="La Salazar")')
 #print(belmira)
+
 
 #- FILTRO 4: Encontrar los datos de las veredas Quitasol de Bello mostrando además las medias de cada ítem del dataframe
 bello=tabla.query('(Ciudad=="Bello")&(Vereda=="Quitasol")')
@@ -35,3 +36,6 @@ crearTabla(belmira,"veredasBelmira")
 crearTabla(bello,"veredasBello")
 crearTabla(caramanta,"arbolesCaramanta")
 crearTabla(yarumal,"veredasYarumal")
+
+#Generamos graficas
+#graficarPromedioSiembra(tabla, 'Arboles','Hectareas','PromedioSiembra')
