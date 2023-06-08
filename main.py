@@ -2,6 +2,7 @@ import pandas as pd
 from data.datos1 import tabla
 from helpers.crearTablasHtml import crearTabla
 #from helpers.graficasBarras import graficarPromedioSiembra
+from helpers.graficastorta import graficar_torta
 
 #- FILTRO1: Encontrar todos los datos de santa fe de Antioquia donde se tengan siembras de + de 250 arboles
 santaFe=tabla.query('(Ciudad=="Santa Fe de Antioquia")&(Arboles>=250)')
@@ -28,6 +29,14 @@ caramanta=tabla.query('(Ciudad=="Caramanta")&(Arboles>100)')
 yarumal=tabla.query('(Ciudad=="Yarumal")&(Vereda=="Mallarino")')
 #print(yarumal)
 
+#Genereal de cada municipio
+gnralYarumal=tabla.query('Ciudad=="Yarumal"')
+gnralSantafe=tabla.query('Ciudad=="Santa Fe de Antioquia"')
+gnralCaucasia=tabla.query('Ciudad=="Caucasia"')
+gnralBelmira=tabla.query('Ciudad=="Belmira"')
+gnralBello=tabla.query('Ciudad=="Bello"')
+gnralCaramanta=tabla.query('Ciudad=="Caramanta"')
+
 #Creando tablas
 
 crearTabla(santaFe,"arbolesStafe")
@@ -36,6 +45,14 @@ crearTabla(belmira,"veredasBelmira")
 crearTabla(bello,"veredasBello")
 crearTabla(caramanta,"arbolesCaramanta")
 crearTabla(yarumal,"veredasYarumal")
+crearTabla(tabla,"generalAnt")
+crearTabla(gnralBello,"generalBello")
+crearTabla(gnralBelmira,"generalBelmira")
+crearTabla(gnralCaramanta,"generalCaramanta")
+crearTabla(gnralYarumal,"generalYarumal")
+crearTabla(gnralSantafe,"generalSantafe")
+crearTabla(gnralCaucasia,"generalCaucasia")
 
 #Generamos graficas
 #graficarPromedioSiembra(tabla, 'Arboles','Hectareas','PromedioSiembra')
+graficar_torta(caramanta, [300, 800, 1300, 1800, 2300, 2800, 3200], 'Arboles', 'Hectareas', 'datosCaramanta')
